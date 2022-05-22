@@ -8,16 +8,12 @@
             <h1><a href="/">Zaccc's Blog</a></h1>
         </header>
 
-        <article>
-            <time>published: 21.05.2022, 15:12</time>
-            <h2><a href="">Deploiement du site</a></h2>
-            <p>Le déployement du site c'est très bien passé, j'ai du régler quelques erreurs de configurations mais en moins de 15 minutes, le travail était fini.</p>
-        </article>
-
-        <article>
-            <time>published: 21.05.2022, 15:13</time>
-            <h2><a href="">template HTML</a></h2>
-            <p>Le html, c'est un art! il faut savoir assembler les différentes petites balises pour créer un ensemble cohérent qui fera office de page web.</p>
-        </article>
+		{% for post in posts %}
+			<article>
+				<time>published: {{ post.published_date }}</time>
+				<h2><a href="">{{ post.title }}</a></h2>
+				<p>{{ post.text|linebreaksbr }}</p>
+			</article>
+		{% endfor %}
     </body>
 </html>
