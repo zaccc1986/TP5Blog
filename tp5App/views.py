@@ -5,7 +5,7 @@ from .models import Post, Comment
 
 
 def post_list(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('created_date')
+    posts = Post.objects.filter(created_date__lte=timezone.now()).order_by('created_date')
     return render(request, 'tp5App/post_list.html', {'posts':posts})
 
 
