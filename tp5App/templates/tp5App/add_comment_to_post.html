@@ -6,13 +6,13 @@
 
 <div data-gb-custom-block data-tag="block"></div>
 
-    <h1>New comment</h1>
-    <form method="POST" class="post-form">
+    <h1>Nouveau Commentaire</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
 
 <div data-gb-custom-block data-tag="csrf_token">
 
         {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Send</button>
+        <button type="submit" class="save btn btn-secondary">Envoyer</button>
     </form>
 
 </div>
