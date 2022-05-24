@@ -61,14 +61,14 @@ body {
 
 .btn-secondary,
 .btn-secondary:visited {
-    color: #288bbb;
+    color: #ff47bc;
     background: none;
-    border-color: #288bbb;
+    border-color: #ff47bc;
 }
 
 .btn-secondary:hover {
     color: #FFFFFF;
-    background-color: #288bbb;
+    background-color: #ff47bc;
 }
 
 .comment {

@@ -10,12 +10,12 @@
 	<body>
 		<div class="page-header">
 			{% if user.is_authenticated %}
-				<a class="btn btn-secondary" href="{% url 'post_new' %}">
+				<a class="btn btn-secondary top-menu" href="{% url 'post_new' %}">
 				{% include './icons/sticky.svg' %}
 				</a>
-				<p class="">Bonjour {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+				<p class="top-menu">Bonjour {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
 			{% else %}
-				<a class="btn btn-secondary" href="{% url 'login' %}">
+				<a class="btn btn-secondary top-menu" href="{% url 'login' %}">
 				{% include './icons/box-arrow-in-right.svg' %}
 				</a>
 			{% endif %}
