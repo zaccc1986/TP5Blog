@@ -3,8 +3,7 @@
 {% block content %}
 	{% for post in posts %}
 		<article class="post">
-			<time>published: {{ post.created_date }}</time>
-			<p><a href="">{{ post.author }}</a><p>
+			<time>published: {{ post.created_date }}<p> by :{{ post.author }}<p></time>
 			<h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
 						<p>{{ post.text|linebreaksbr }}</p>
 			<div data-gb-custom-block data-tag="url" data-0="post_detail">
