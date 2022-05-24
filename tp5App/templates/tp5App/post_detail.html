@@ -29,6 +29,8 @@
 {% for comment in post.comments.all %}
 <div class="comment">
 	<a class="btn btn-secondary" href="{% url 'comment_remove' pk=comment.pk %}">
+		{% include './icons/x.svg' %}
+	</a>
 	<strong>{{ comment.author }}</strong>
 	<p>{{ comment.text|linebreaks }}</p>
 </div>
