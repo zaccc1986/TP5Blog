@@ -43,7 +43,7 @@ def post_edit(request, pk):
     return render(request, 'tp5App/post_edit.html', {'form': form})
 
 
-def post_remove(request, pk):
+def post_remove(pk):
     post = get_object_or_404(Post, pk=pk)
     post.delete()
     return redirect('post_list')
