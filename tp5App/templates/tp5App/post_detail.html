@@ -28,6 +28,8 @@
 
 {% for comment in post.comments.all %}
 <div class="comment">
+	<strong>{{ comment.author }}</strong>
+	<p>{{ comment.text|linebreaks }}</p>
 	<aside class="actions">
 	{% if user.is_authenticated %}
 		<a class="btn btn-secondary" href="{% url 'comment_remove' pk=comment.pk %}">
@@ -35,8 +37,6 @@
 		</a>
 	{% endif %}
 	</aside>
-	<strong>{{ comment.author }}</strong>
-	<p>{{ comment.text|linebreaks }}</p>
 </div>
 
 
