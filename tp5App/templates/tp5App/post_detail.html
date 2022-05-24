@@ -33,17 +33,22 @@
 <div data-gb-custom-block data-tag="if"></div>
 
 
+
+
+{% for comment in post.comments.all %}
 <div class="comment">
-    <div class="date">
-		<div data-gb-custom-block data-tag="if"></div>
-			<div data-gb-custom-block data-tag='url' data-0='comment_remove'><a class="btn btn-default" href=""><span class="glyphicon glyphicon-remove"></span></a></div>
-		</div>
-		<strong>{{ comment.author }}</strong>
-		<p>{{ comment.text|linebreaks }}</p>
+	<div data-gb-custom-block data-tag="if"></div>
+		<div data-gb-custom-block data-tag='url' data-0='comment_remove'><a class="btn btn-default" href=""><span class="glyphicon glyphicon-remove"></span></a></div>
 	</div>
+	<strong>{{ comment.author }}</strong>
+	<p>{{ comment.text|linebreaks }}</p>
 </div>
+{% endfor %}
 
 <div data-gb-custom-block data-tag="empty">
     <p>Se message ne contient aucun commentaire !</p>
 </div>
+
+
+
 {% endblock %}
