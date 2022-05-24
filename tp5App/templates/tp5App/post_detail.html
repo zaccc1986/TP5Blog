@@ -26,29 +26,15 @@
 
 <hr>
 
-<div data-gb-custom-block data-tag="for"></div>
-
-    
-
-<div data-gb-custom-block data-tag="if"></div>
-
-
-
-
 {% for comment in post.comments.all %}
 <div class="comment">
-	<div data-gb-custom-block data-tag="if"></div>
-		<div data-gb-custom-block data-tag='url' data-0='comment_remove'><a class="btn btn-default" href=""><span class="glyphicon glyphicon-remove"></span></a></div>
-	</div>
+	<a class="btn btn-secondary" href="{% url 'comment_remove' pk=comment.pk %}">
 	<strong>{{ comment.author }}</strong>
 	<p>{{ comment.text|linebreaks }}</p>
 </div>
+
+
+
+
 {% endfor %}
-
-<div data-gb-custom-block data-tag="empty">
-    <p>Se message ne contient aucun commentaire !</p>
-</div>
-
-
-
 {% endblock %}
